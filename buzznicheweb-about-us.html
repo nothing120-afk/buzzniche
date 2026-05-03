@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>About Us</title>
+        <link rel="stylesheet" href="styles/buzznicheweb.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+    <body>
+        
+
+       <div class="dashboard">
+           <div class="logo-container"><img src="thumbnails/Buzzniche logo.png" class="logo"> </div>
+           <div class="menu">
+                <a href="index.html"> <button class="home" >Home</button></a>
+                <a href="buzznicheweb-about-us.html"><button class="about-us">About Us</button></a>
+                <a href="buzznicheweb-shops.html"> <button class="shops">Shops</button></a>
+
+                <label class="event-wrapper">
+                    <input type="checkbox" checked="" class="event-wrapper-inp" />
+                        <div class="bar">
+                            <span class="top bar-list"></span>
+                            <span class="middle bar-list"></span>
+                            <span class="bottom bar-list"></span>
+                        </div>
+                        <section class="menu-container">
+                            <a href="index.html"><div class="menu-list">Home</div></a>
+                            <a href="buzznicheweb-about-us.html"><div class="menu-list">About Us</div></a>
+                            <a href="buzznicheweb-shops.html"> <div class="menu-list">Shops</div></a>
+                        </section>
+                </label>
+           </div>
+       </div> 
+
+       <div class="background-about">
+            <img src="thumbnails/classpic.jpg" class="class-pic" >
+        </div>
+
+        <div class="overlay-about">
+            <div class="greeting-description-container">
+                <span class="greeting-about">About Us </span>
+            </div>
+        </div>
+
+        <div class="about-us-content-container">
+            <div class="about-us-content">
+                <span class="abt1">Who are we?</span>
+                <span class="abt2"> Buzzniche is a school-based business program built by a group of ABM students from Maria Asuncion Rodriguez Tinga Highschool (MRTHS). This program is composed of integrated businesses owned by the students. Our project aims to expose our entrepreneurial innovations to potential customers outside the campus. This move is led by Ms. Agnes Navarro, a grade 12 adviser.</span>
+            </div>
+            <div class="video">
+                <video controls width="520" class="video">
+                    <source src="thumbnails/invideo-ai-1080 From MRTHS to Market_ Meet Buzzniche 2026-01-28.mp4" type="video/mp4">
+                </video>
+            </div>
+
+        </div>
+        <div class="stats-container" style="background-color: rgb(247, 243, 243); height: auto;">
+            <div class="stats">
+                <div class="stat" style="background-color: rgb(247, 243, 243);">
+                    <h3 class="counter" data-target="05">0</h3>
+                        <p>Student Businesses</p>
+                </div>
+                <div class="stat" style="background-color:rgb(247, 243, 243);">
+                    <h3 class="counter" data-target="+27">0</h3>
+                        <p>Students Involved</p>
+                </div>
+                 <div class="stat" style="background-color: rgb(247, 243, 243);">
+                    <h3 class="counter" data-target="100">0</h3>
+                        <p>Students Reached</p>
+                </div>
+                 <div class="stat" style="background-color: rgb(247, 243, 243);">
+                    <h3 class="counter" data-target="4">0</h3>
+                        <p>Categories</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-about">
+            <div class="socials" >© 2026 Buzzniche. All rights reserved.</div>
+        </div>
+
+        <script>
+const counters = document.querySelectorAll('.counter');
+const countedCounters = new Set();
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return rect.top <= window.innerHeight && rect.bottom >= 0;
+}
+
+function runCounters() {
+  counters.forEach(counter => {
+    if (countedCounters.has(counter)) return;
+
+    if (isInViewport(counter)) {
+      const target = +counter.getAttribute('data-target');
+      const updateCount = () => {
+        const count = +counter.innerText;
+        const increment = target / 200;
+
+        if (count < target) {
+          counter.innerText = Math.ceil(count + increment);
+          setTimeout(updateCount, 10);
+        } else {
+          counter.innerText = target;
+          countedCounters.add(counter);
+        }
+      };
+      updateCount();
+    }
+  });
+}
+
+window.addEventListener('scroll', runCounters);
+runCounters();
+
+</script>
+    </body>

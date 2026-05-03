@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles/buzznicheweb.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Buzzniche Homepage</title>
+    </head>
+    <body>
+
+        <div class="background">
+            <img src="thumbnails/background-photo.webp">
+        </div>
+
+        <div class="overlay">
+            <div class="greeting-description-container" style="background-color: white;">
+                <span class="connect">CONNECT WITH US!</span>
+                <textarea placeholder="Write your message here" class="text-box"></textarea>
+                <button class="submit">Submit</button>
+            </div>
+        </div>
+
+       <div class="dashboard">
+           <div class="logo-container"><img src="thumbnails/Buzzniche logo.png" class="logo"> </div>
+           <div class="menu">
+                <a href="index.html"><button class="home">Home</button></a>
+                <a href="buzznicheweb-about-us.html"><button class="about-us">About Us</button></a>
+                <a href="buzznicheweb-shops.html"><button class="shops">Shops</button></a>
+                <a href="buzznicheweb-contact-us.html"><button class="contact-us">Contact Us</button></a>
+
+                <label class="event-wrapper">
+                    <input type="checkbox" checked="" class="event-wrapper-inp" />
+                        <div class="bar">
+                            <span class="top bar-list"></span>
+                            <span class="middle bar-list"></span>
+                            <span class="bottom bar-list"></span>
+                        </div>
+                        <section class="menu-container">
+                            <a href="index.html"><div class="menu-list">Home</div></a>
+                            <a href="buzznicheweb-about-us.html"><div class="menu-list">About Us</div></a>
+                            <a href="buzznicheweb-shops.html"> <div class="menu-list">Shops</div></a>
+                            <a href="buzznicheweb-contact-us.html"><div class="menu-list">Contact Us</div></a>
+                        </section>
+                </label>
+           </div>
+       </div> 
+       <div class="footer">
+                <div class="socials" >© 2026 Buzzniche. All rights reserved.</div>
+            </div>
+    </body>
+
+       <style>
+        .greeting-description-container{
+            height: 60vh;
+            width: 40vw;
+            border-radius: 15px;
+            box-shadow: 0px 0px 6px rgb(0,0,0,0.2);
+            display:grid;
+            grid-template-rows: 1fr 1fr 1fr;
+            justify-content:center;
+            align-content:center;
+            row-gap:20px;
+            padding-bottom:20px;
+            padding-top:20px;
+        }
+
+        .connect{
+            font-family: Arial;
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .text-box{
+            height:30vh;
+            width: 30vw;    
+            border: solid rgb(205, 202, 202) 0.1px;
+            border-radius: 20px;
+            background-color: rgb(254, 254, 254);
+            padding-left: 1vw;
+            padding-top: 2vh;
+            font-family:Arial;
+            justify-self:center;
+            }
+
+            .submit{
+                border:none;
+                border-radius: 50px;
+                height: 50px;
+                background-color:black;
+                color:white;
+                width:30vw;
+                justify-self:center;
+            }
+
+        @media(max-width: 1000px){
+            .greeting-description-container{
+                width:60
+            }
+            .connect{
+                font-size: 3vw;
+            }
+        }
+        @media(max-width: 700px){
+            .greeting-description-container{
+                width: 300px;
+                height: 300px;
+            }
+
+            .text-box{
+                height:140px;
+                width: 220px;
+            }
+
+            .connect{
+                font-size: 20px;
+            }
+
+            .submit{
+                width: 220px;
+            }
+        }
+       </style>
+
+       
